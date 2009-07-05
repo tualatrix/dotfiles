@@ -1,0 +1,10 @@
+app-misc/freemind -~x86
+app-emulation/vmware-workstation -~x86
+www-client/midori **
+net-im/galaxium **
+dev-dotnet/webkit-sharp **
+media-libs/realcodecs
+media-libs/amd64codecs
+media-video/realplayer
+=sys-boot/grub-9999 **
+=www-client/chromium-bin-9999 **

@@ -1,0 +1,9 @@
+=app-i18n/ibus-pinyin-1.1.0.20090612
+=app-i18n/ibus-pinyin-1.2.0.20090617
+=app-i18n/ibus-1.1.0.20090612
+=app-i18n/ibus-1.2.0.20090617
+=app-i18n/ibus-table-1.1.0.20090609
+=app-i18n/ibus-table-1.1.0.20090603
+=app-i18n/ibus-table-1.1.0.20090615
+=media-libs/mesa-7.4.3
+=x11-base/xorg-server-1.6.1.901-r5

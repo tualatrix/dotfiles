@@ -1,0 +1,13 @@
+app-admin/gnome-system-tools
+dev-libs/liboobs
+app-admin/system-tools-backends
+media-libs/realcodecs
+media-libs/amd64codecs
+media-video/realplayer
+=sys-apps/portage-2.2_rc33
+=x11-base/xorg-server-1.6.1.901-r3
+=x11-libs/xcb-util-0.3.4
+=www-client/chromium-bin-9999
+#=www-client/mozilla-firefox-3.5-r2
+#=net-libs/xulrunner-1.9.1
+#=dev-libs/nspr-4.8

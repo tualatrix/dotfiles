@@ -1,0 +1,51 @@
+app-i18n/fcitx xft
+sys-devel/gcc -gtk
+=sys-devel/gcc-4.1.2 -gtk -fortran
+media-libs/freetype bindist
+media-gfx/splashutils fbcondecor
+media-video/mplayer -gtk
+app-text/acroread nsplugin
+media-video/totem nsplugin
+media-video/vlc qt4
+dev-lang/python sqlite doc examples
+gnome-extra/sensors-applet hddtemp lm_sensors
+net-p2p/mldonkey -gtk
+net-im/galaxium adium irc
+dev-python/django sqlite
+dev-db/mysql -berkdb
+www-client/opera qt-static
+dev-lang/php ctype pcre session unicode cgi filter tokenizer
+net-im/gajim idle trayicon
+sys-block/gparted fat ntfs
+net-libs/webkit-gtk sqlite
+app-emulation/virtualbox-ose qt4
+app-text/texlive-core xetex
+net-misc/networkmanager dhclient dhcpcd
+gnome-base/gvfs archive cdda gphoto2
+www-servers/nginx fastcgi
+dev-util/subversion -apache2 java
+app-misc/tracker deskbar
+app-office/openoffice nsplugin
+net-dns/avahi mdnsresponder-compat
+media-tv/gmlive sopcast totem
+net-libs/webkit-gtk pango
+dev-dotnet/gtk-sharp glade
+media-libs/freetype kpathsea
+app-text/lcdf-typetools kpathsea
+media-sound/rhythmbox -cdr tagwriting
+net-misc/vnc server
+dev-dotnet/libgdiplus pango
+dev-lang/mono monolight
+mail-client/mail-notification -evo gmail
+dev-util/subversion -dso
+app-editors/vim cscope
+app-editors/gvim cscope
+app-misc/beagle -ole
+app-doc/autobook examples
+dev-util/android-sdk doc examples
+dev-java/tomcat-servlet-api java5
+dev-tcltk/expect -X
+app-benchmarks/bootchart java
+net-dns/avahi autoipd
+dev-util/git tk
+sys-apps/hal disk-partition
