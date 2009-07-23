@@ -4,6 +4,9 @@ parse_git_branch() {
 
 PS1='`a=$?;if [ $a -ne 0 ]; then echo -n -e "\[\e[01;32;41m\]{$a}"; fi`\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\]\W`b=$(parse_git_branch); if [ x"$b" != "x" ]; then echo -n -e "\[\e[33;40m\](branch:$b)\[\033[01;32m\]\[\e[00m\]"; fi`\[\033[01;34m\] $ \[\e[00m\]'
 
+#DO NOT Need function
+PS1='\[\e[01;32m\][\u@\[\e[01;33m\]\h \[\e[01;34m\]\W] `[[ -d .git ]] && echo -n -e "\[\e[01;33m\](branch:$(git branch | sed -e "/^ /d" -e "s/* \(.*\)/\1/"))\[\e[01;34m\] "`\$ \[\e[00m\]'
+
 if [ -x /usr/bin/dircolors ]; then
     eval "`dircolors -b`"
     alias ls='ls --color=force'
