@@ -6,13 +6,13 @@ PS1='`a=$?;if [ $a -ne 0 ]; then echo -n -e "\[\e[01;32;41m\]{$a}"; fi`\[\033[01
 
 if [ -x /usr/bin/dircolors ]; then
     eval "`dircolors -b`"
-    alias ls='ls --color=auto'
-    alias dir='dir --color=auto'
-    alias vdir='vdir --color=auto'
+    alias ls='ls --color=force'
+    alias dir='dir --color=force'
+    alias vdir='vdir --color=force'
 
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
+    alias grep='grep --color=force'
+    alias fgrep='fgrep --color=force'
+    alias egrep='egrep --color=force'
 fi
 
 # some more ls aliases
