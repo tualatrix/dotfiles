@@ -1,8 +1,11 @@
 colorscheme tango
+
 syntax on
-set hls
+set hlsearch
 
 filetype indent on
+filetype plugin indent on
+filetype on
 
 if filereadable("/etc/vim/vimrc")
   source /etc/vim/vimrc
