@@ -14,3 +14,5 @@ set encoding=utf-8
 autocmd FileType python set tabstop=4 shiftwidth=4 expandtab
 
 :map <F12> :!python -m pdb %
+:map <C-c> "+y
+:map <C-v> "+p
