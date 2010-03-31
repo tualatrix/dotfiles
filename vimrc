@@ -14,7 +14,10 @@ endif
 set grepprg=grep\ -nH\ $*
 set helplang=cn
 set encoding=utf-8
-autocmd FileType python set tabstop=4 shiftwidth=4 expandtab
+set tw=79
+"set et
+"retab
+autocmd FileType python set tabstop=4 shiftwidth=4 expandtab omnifunc=pythoncomplete#Complete
 
 :map <F12> :!python -m pdb %
 :map <C-c> "+y
