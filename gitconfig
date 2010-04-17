@@ -3,3 +3,7 @@
 	email = tualatrix@gmail.com
 [color]
 	ui = auto
+[push]
+	default = current
+[core]
+	editor = vim
