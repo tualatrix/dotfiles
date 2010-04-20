@@ -14,7 +14,7 @@ endif
 set grepprg=grep\ -nH\ $*
 set helplang=cn
 set encoding=utf-8
-set tw=79
+"set tw=79 "Well, it's too annoying.
 "set et
 "retab
 autocmd FileType python set tabstop=4 shiftwidth=4 expandtab omnifunc=pythoncomplete#Complete
