@@ -63,6 +63,21 @@ function BreakToLines() range
     endif
 endfunction
 
+function DjangoBlock()
+        let curr_line   = getline(".")
+        let back_word = split(curr_line)[-1]
+	let block = "{% block ".back_word." %}{% endblock %}"
+	let replace = substitute(curr_line, back_word."$", '', "g")
+	call setline(".", replace)
+	return block
+endfunction
+
+function SetCursorBack()
+	let [lnum, col] = searchpos('}{', 'nb')
+	call cursor(lnum, col+1)
+	return ''
+endfunction
+
 nmap <silent>  ;s  :call ToggleSyntax()<CR>
 "C++/Java/PHP comment...
 imap <silent>  ///  <C-R>=CommentBlock(input("Enter comment: "))<CR>
@@ -74,3 +89,4 @@ imap <silent>  ---  <C-R>=CommentBlock(input("Enter comment: "),'--')<CR>
 imap <silent>  ###  <C-R>=CommentBlock(input("Enter comment: "),'#','#')<CR>
 nmap ;st Vip:call AddStar()
 nmap ;bl Vip:call BreakToLines()
+imap <C-D><C-B> <C-R>=DjangoBlock()<CR> <C-R>=SetCursorBack()<CR>
