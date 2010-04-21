@@ -78,6 +78,12 @@ function SetCursorBack()
 	return ''
 endfunction
 
+function DjangoView()
+        let curr_line   = getline(".")
+	call setline(".", '')
+	return "def ".curr_line."(request):"."\<CR>"
+endfunction
+
 nmap <silent>  ;s  :call ToggleSyntax()<CR>
 "C++/Java/PHP comment...
 imap <silent>  ///  <C-R>=CommentBlock(input("Enter comment: "))<CR>
@@ -90,3 +96,4 @@ imap <silent>  ###  <C-R>=CommentBlock(input("Enter comment: "),'#','#')<CR>
 nmap ;st Vip:call AddStar()
 nmap ;bl Vip:call BreakToLines()
 imap <C-D><C-B> <C-R>=DjangoBlock()<CR> <C-R>=SetCursorBack()<CR>
+imap <C-D><C-V> <C-R>=DjangoView()<CR>
