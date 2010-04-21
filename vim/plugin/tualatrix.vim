@@ -72,16 +72,22 @@ function DjangoBlock()
 	return block
 endfunction
 
-function SetCursorBack()
-	let [lnum, col] = searchpos('}{', 'nb')
+function SetCursorBack(pattern)
+	let [lnum, col] = searchpos(a:pattern, 'nb')
 	call cursor(lnum, col+1)
 	return ''
 endfunction
 
 function DjangoView()
-        let curr_line   = getline(".")
+        let curr_line  = getline(".")
 	call setline(".", '')
 	return "def ".curr_line."(request):"."\<CR>"
+endfunction
+
+function DjangoInner()
+        let curr_line  = getline(".")
+	call setline(".", '')
+	return "{% ".curr_line." \"\" %}"
 endfunction
 
 nmap <silent>  ;s  :call ToggleSyntax()<CR>
@@ -95,5 +101,7 @@ imap <silent>  ---  <C-R>=CommentBlock(input("Enter comment: "),'--')<CR>
 imap <silent>  ###  <C-R>=CommentBlock(input("Enter comment: "),'#','#')<CR>
 nmap ;st Vip:call AddStar()
 nmap ;bl Vip:call BreakToLines()
-imap <C-D><C-B> <C-R>=DjangoBlock()<CR> <C-R>=SetCursorBack()<CR>
+imap <C-D><C-B> <C-R>=DjangoBlock()<CR> <C-R>=SetCursorBack('}{')<CR>
 imap <C-D><C-V> <C-R>=DjangoView()<CR>
+imap <C-D><C-I> <C-R>=DjangoInner()<CR> <C-R>=SetCursorBack('\"\"')<CR>
+
