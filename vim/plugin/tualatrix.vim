@@ -90,6 +90,15 @@ function DjangoInner()
 	return "{% ".curr_line." \"\" %}"
 endfunction
 
+function DjangoVariable()
+        let curr_line   = getline(".")
+        let back_word = split(curr_line)[-1]
+	let block = "{{ ".back_word." }}"
+	let replace = substitute(curr_line, back_word."$", '', "g")
+	call setline(".", replace)
+	return block
+endfunction
+
 nmap <silent>  ;s  :call ToggleSyntax()<CR>
 "C++/Java/PHP comment...
 imap <silent>  ///  <C-R>=CommentBlock(input("Enter comment: "))<CR>
@@ -104,4 +113,4 @@ nmap ;bl Vip:call BreakToLines()
 imap <C-D><C-B> <C-R>=DjangoBlock()<CR> <C-R>=SetCursorBack('}{')<CR>
 imap <C-D><C-V> <C-R>=DjangoView()<CR>
 imap <C-D><C-I> <C-R>=DjangoInner()<CR> <C-R>=SetCursorBack('\"\"')<CR>
-
+imap <C-D><C-[> <C-R>=DjangoVariable()<CR>
