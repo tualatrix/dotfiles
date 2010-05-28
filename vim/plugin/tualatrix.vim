@@ -100,14 +100,7 @@ function DjangoVariable()
 endfunction
 
 nmap <silent>  ;s  :call ToggleSyntax()<CR>
-"C++/Java/PHP comment...
-imap <silent>  ///  <C-R>=CommentBlock(input("Enter comment: "))<CR>
 
-"Ada/Applescript/Eiffel comment...
-imap <silent>  ---  <C-R>=CommentBlock(input("Enter comment: "),'--')<CR>
-
-"Perl/Python/Shell comment...
-imap <silent>  ###  <C-R>=CommentBlock(input("Enter comment: "),'#','#')<CR>
 nmap ;st Vip:call AddStar()
 nmap ;bl Vip:call BreakToLines()
 imap <C-D><C-B> <C-R>=DjangoBlock()<CR> <C-R>=SetCursorBack('}{')<CR>
