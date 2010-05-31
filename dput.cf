@@ -1,0 +1,20 @@
+[release]
+fqdn = ppa.launchpad.net
+method = ftp
+incoming = ~tualatrix/ppa/ubuntu/
+login = anonymous
+allow_unsigned_uploads = 0
+
+[testing]
+fqdn = ppa.launchpad.net
+method = ftp
+incoming = ~ubuntu-tweak-testing/ppa/ubuntu/
+login = anonymous
+allow_unsigned_uploads = 0
+
+[personal]
+fqdn = ppa.launchpad.net
+method = ftp
+incoming = ~tualatrix/personal/ubuntu/
+login = anonymous
+allow_unsigned_uploads = 0
