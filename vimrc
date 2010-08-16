@@ -40,6 +40,6 @@ let vala_no_tab_space_error = 1
 " Minimum lines used for comment syncing (default 50)
 "let vala_minlines = 120
 
-:map <F12> :!python -m pdb %
+:map <F12> :!python -m pdb %<CR>
 :map <C-c> "+y
 :map <C-v> "+p
