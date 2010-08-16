@@ -18,3 +18,10 @@ method = ftp
 incoming = ~tualatrix/personal/ubuntu/
 login = anonymous
 allow_unsigned_uploads = 0
+
+[osd-lyrics]
+fqdn = ppa.launchpad.net
+method = ftp
+incoming = ~osd-lyrics/ppa/ubuntu/
+login = anonymous
+allow_unsigned_uploads = 0
