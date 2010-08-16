@@ -40,6 +40,20 @@ let vala_no_tab_space_error = 1
 " Minimum lines used for comment syncing (default 50)
 "let vala_minlines = 120
 
+"Locate and return character "above" current cursor position...
+function! LookUpwards()
+python << EOF
+from vim import *
+row, col = current.window.cursor
+s = current.buffer[row - 2][col]
+current.line = current.line + s
+EOF
+endfunction
+
+"Reimplement CTRL-Y within insert mode...
+
+nmap <silent>  <C-Y>  :call LookUpwards()<CR>
+
 :map <F12> :!python -m pdb %<CR>
 :map <C-c> "+y
 :map <C-v> "+p
