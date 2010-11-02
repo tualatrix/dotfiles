@@ -163,3 +163,4 @@ if has("cscope")
 endif
 
 
+nmap <C-\>l :CCTreeLoadDB cscope.out<CR>
