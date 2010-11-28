@@ -7,9 +7,11 @@ alias pycscope="find -name '*.py' > cscope.files && cscope -R"
 if [ $KERNEL == "Darwin" ]; then
     export LS=gls
     export SED=gsed
+    export BASHCOMPLETION=/usr/local/etc/bash_completion
 else
     export LS=ls
     export SED=sed
+    export BASHCOMPLETION=/etc/bash_completion
 fi
 
 alias ls="$LS --color=auto"
@@ -24,3 +26,10 @@ alias egrep="egrep --color=auto"
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if [ -f $BASHCOMPLETION ] && ! shopt -oq posix; then
+    . $BASHCOMPLETION
+fi
