@@ -18,6 +18,7 @@ set encoding=utf-8
 "set et
 "retab
 autocmd FileType python set tabstop=4 shiftwidth=4 expandtab omnifunc=pythoncomplete#Complete
+autocmd FileType c set tabstop=2 shiftwidth=2 expandtab omnifunc=ccomplete#Complete
 
 "vala
 autocmd BufRead *.vala set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
@@ -49,6 +50,8 @@ s = current.buffer[row - 2][col]
 current.line = current.line + s
 EOF
 endfunction
+
+let g:pydiction_location = '$HOME/.vim/ftplugin/complete-dict'
 
 "Reimplement CTRL-Y within insert mode...
 
