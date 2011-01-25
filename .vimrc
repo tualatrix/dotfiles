@@ -60,3 +60,4 @@ nmap <silent>  <C-Y>  :call LookUpwards()<CR>
 :map <F12> :!python -m pdb %<CR>
 :map <C-c> "+y
 :map <C-v> "+p
+nmap <F2> :NERDTreeToggle<CR>.
