@@ -19,6 +19,9 @@ set encoding=utf-8
 "retab
 autocmd FileType python set tabstop=4 shiftwidth=4 expandtab omnifunc=pythoncomplete#Complete
 autocmd FileType c set tabstop=2 shiftwidth=2 expandtab omnifunc=ccomplete#Complete
+set tabstop=4
+set shiftwidth=4
+set expandtab
 
 "vala
 autocmd BufRead *.vala set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
