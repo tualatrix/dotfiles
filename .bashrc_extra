@@ -34,3 +34,5 @@ fi
 
 alias pycscope="find -name '*.py' > cscope.files && cscope -R"
 alias gendocandopen="epydoc --config epydoc.config && xdg-open apidocs/index.html"
+
+export PATH=$HOME/Sources/tools/bin:$PATH
