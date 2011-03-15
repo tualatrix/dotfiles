@@ -36,6 +36,6 @@ alias pycscope="find -name '*.py' > cscope.files && cscope -R"
 alias gendocandopen="epydoc --config epydoc.config && xdg-open apidocs/index.html"
 alias ut="workon utcom && cdvirtualenv && cd utcom"
 
-export PATH=$HOME/Sources/tools/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/Sources/tools/bin:$PATH
 export DEBEMAIL="tualatrix@gmail.com"
 export DEBFULLNAME="Tualatrix Chou"
