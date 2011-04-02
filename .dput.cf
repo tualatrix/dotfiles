@@ -25,3 +25,10 @@ method = ftp
 incoming = ~osd-lyrics/ppa/ubuntu/
 login = anonymous
 allow_unsigned_uploads = 0
+
+[next]
+fqdn = ppa.launchpad.net
+method = ftp
+incoming = ~tualatrix/next/ubuntu/
+login = anonymous
+allow_unsigned_uploads = 0
