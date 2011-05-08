@@ -6,3 +6,6 @@ fi
 . /usr/local/Cellar/coreutils/8.12/aliases
 
 . $HOME/.bashrc_extra
+
+export WORKON_HOME=$HOME/.virtualenvs
+. /usr/local/share/python/virtualenvwrapper.sh
