@@ -27,6 +27,9 @@ alias pycscope="find -name '*.py' > cscope.files && cscope -R"
 alias gendocandopen="epydoc --config epydoc.config && xdg-open apidocs/index.html"
 alias ut="workon utcom && cdvirtualenv && cd utcom"
 
-export PATH=$HOME/.local/bin:$HOME/.rvm/bin:$HOME/.rvm/gems/ruby-1.9.2-p180/bin:$HOME/Sources/tools/bin:$HOME/Sources/tools/builder:$PATH
+# ruby
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+
+export PATH=$HOME/.local/bin:$HOME/Sources/tools/bin:$HOME/Sources/tools/builder:$PATH
 export DEBEMAIL="tualatrix@gmail.com"
 export DEBFULLNAME="Tualatrix Chou"
