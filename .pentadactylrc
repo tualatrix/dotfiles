@@ -10,3 +10,5 @@ map -m n,v,i,c,t <C-c> <Pass>
 map -m i,c,t <C-v> <Pass>
 map -m i,c,t <C-x> <Pass>
 map -m i,c,t <C-z> <Pass>
+
+set passkeys+=mail.google.com:ujko<CR>,gi
