@@ -1,0 +1,11 @@
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+fi
+
+# the aliaes must be put below bash_completion, or it won't work
+. /usr/local/Cellar/coreutils/8.12/aliases
+
+. $HOME/.bashrc_extra
+
+export WORKON_HOME=$HOME/.virtualenvs
+. /usr/local/share/python/virtualenvwrapper.sh
