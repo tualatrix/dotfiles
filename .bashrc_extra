@@ -33,3 +33,5 @@ alias ut="workon utcom && cdvirtualenv && cd utcom"
 export PATH=$HOME/.local/bin:$HOME/Sources/tools/bin:$HOME/Sources/tools/builder:$PATH
 export DEBEMAIL="tualatrix@gmail.com"
 export DEBFULLNAME="Tualatrix Chou"
+export UTCOM_USER="tualatrix"
+export UTCOM_HOST="ubuntu-tweak.com:24"
