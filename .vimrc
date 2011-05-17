@@ -64,3 +64,6 @@ nmap <silent>  <C-Y>  :call LookUpwards()<CR>
 :map <C-c> "+y
 :map <C-v> "+p
 nmap <F2> :NERDTreeToggle<CR>.
+
+set list
+set listchars=tab:▸\ ,eol:¬
