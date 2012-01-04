@@ -1,5 +1,7 @@
 colorscheme tango
 
+call pathogen#infect()
+
 syntax on
 set hlsearch
 
