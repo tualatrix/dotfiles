@@ -4,5 +4,5 @@ set +e
 if [ -e '$HOME/.rails.bash' ];then
     echo "rails.bash has been linked. Pass."
 else
-    ln -s .rails.bash $HOME/.rails.bash
+    ln -s $PWD/.rails.bash $HOME/.rails.bash
 fi
