@@ -2,7 +2,7 @@
 set +e
 
 if [ -e '$HOME/.rails.bash' ];then
-    ln -s .rails.bash $HOME/.rails.bash
-else
     echo "rails.bash has been linked. Pass."
+else
+    ln -s .rails.bash $HOME/.rails.bash
 fi
