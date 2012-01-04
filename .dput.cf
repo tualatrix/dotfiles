@@ -32,3 +32,10 @@ method = ftp
 incoming = ~tualatrix/next/ubuntu/
 login = anonymous
 allow_unsigned_uploads = 0
+
+[vpn-indicator]
+fqdn = ppa.launchpad.net
+method = ftp
+incoming = ~tualatrix/vpn-indicator/ubuntu/
+login = anonymous
+allow_unsigned_uploads = 0
