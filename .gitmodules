@@ -1,0 +1,6 @@
+[submodule ".vim/vim-addons/vim-ruby"]
+	path = .vim/vim-addons/vim-ruby
+	url = https://github.com/vim-ruby/vim-ruby.git
+[submodule ".vim/vim-addons/vim-rails"]
+	path = .vim/vim-addons/vim-rails
+	url = https://github.com/tpope/vim-rails.git
