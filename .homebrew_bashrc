@@ -3,7 +3,7 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
 fi
 
 # the aliaes must be put below bash_completion, or it won't work
-. /usr/local/Cellar/coreutils/8.14/aliases
+PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 
 . $HOME/.bashrc_extra
 
