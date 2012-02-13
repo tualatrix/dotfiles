@@ -6,3 +6,9 @@ if [ -e '$HOME/.rails.bash' ];then
 else
     ln -s $PWD/.rails.bash $HOME/.rails.bash
 fi
+
+if [ -e '$HOME/.byoburc.tmux' ];then
+    echo "byobu been linked. Pass."
+else
+    ln -s $PWD/.byoburc.tmux $HOME
+fi

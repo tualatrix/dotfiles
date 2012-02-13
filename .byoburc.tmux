@@ -1,3 +1,6 @@
+set -g prefix C-a
+bind-key C-a last-window
+
 set-window-option -g mode-keys vi
 bind C-h select-pane -L
 bind c-j select-pane -D

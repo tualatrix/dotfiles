@@ -29,7 +29,6 @@ alias ut="workon utcom && cdvirtualenv && cd utcom"
 
 # ruby
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
-. $HOME/.rails.bash
 
 export PATH=$HOME/.local/bin:$HOME/Sources/tools/bin:$HOME/Sources/tools/builder:$PATH
 export DEBEMAIL="tualatrix@gmail.com"
