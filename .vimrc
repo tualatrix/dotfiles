@@ -19,6 +19,8 @@ set encoding=utf-8
 "retab
 autocmd FileType python set tabstop=4 shiftwidth=4 expandtab omnifunc=pythoncomplete#Complete
 autocmd FileType c set tabstop=2 shiftwidth=2 expandtab omnifunc=ccomplete#Complete
+au BufRead,BufNewFile */etc/nginx/* set ft=nginx
+
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -53,7 +55,7 @@ fun SetupVAM()
   " be installed form www.vim.org. Lookup MergeSources to get more control
   " let g:vim_addon_manager['drop_git_sources'] = !executable('git')
 
-  call vam#ActivateAddons(['snipmate-snippets','vim-ruby','vim-rails', 'vim-coffee-script'], {'auto_install' : 0})
+  call vam#ActivateAddons(['snipmate-snippets','vim-ruby','vim-rails', 'vim-coffee-script', 'nginx'], {'auto_install' : 0})
   " sample: call vam#ActivateAddons(['pluginA','pluginB', ...], {'auto_install' : 0})
   " where 'pluginA' could be "git://" "github:YourName" or "snipmate-snippets" see vam#install#RewriteName()
   " also see section "5. Installing plugins" in VAM's documentation
