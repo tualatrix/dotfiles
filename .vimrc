@@ -65,3 +65,6 @@ call SetupVAM()
 " option2:  au GUIEnter * call SetupVAM()
 " See BUGS sections below [*]
 " Vim 7.0 users see BUGS section [3]
+
+" Set this toggle to make code paste more easily
+set pastetoggle=<F7>
