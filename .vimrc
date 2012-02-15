@@ -20,6 +20,7 @@ set encoding=utf-8
 autocmd FileType python set tabstop=4 shiftwidth=4 expandtab omnifunc=pythoncomplete#Complete
 autocmd FileType c set tabstop=2 shiftwidth=2 expandtab omnifunc=ccomplete#Complete
 au BufRead,BufNewFile */etc/nginx/* set ft=nginx
+au BufRead,BufNewFile */etc/init.d/* set ft=sh
 
 set tabstop=4
 set shiftwidth=4
