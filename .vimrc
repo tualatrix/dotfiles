@@ -56,7 +56,7 @@ fun SetupVAM()
   " be installed form www.vim.org. Lookup MergeSources to get more control
   " let g:vim_addon_manager['drop_git_sources'] = !executable('git')
 
-  call vam#ActivateAddons(['snipmate-snippets','vim-ruby','vim-rails', 'vim-coffee-script', 'nginx'], {'auto_install' : 0})
+  call vam#ActivateAddons(['snipmate-snippets','vim-ruby','vim-rails', 'vim-coffee-script', 'nginx', 'ctrlp'], {'auto_install' : 0})
   " sample: call vam#ActivateAddons(['pluginA','pluginB', ...], {'auto_install' : 0})
   " where 'pluginA' could be "git://" "github:YourName" or "snipmate-snippets" see vam#install#RewriteName()
   " also see section "5. Installing plugins" in VAM's documentation
@@ -71,3 +71,4 @@ call SetupVAM()
 
 " Set this toggle to make code paste more easily
 set pastetoggle=<F7>
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn|\.swp$'
