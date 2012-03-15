@@ -26,6 +26,7 @@ alias l='ls -CF'
 alias pycscope="find -name '*.py' > cscope.files && cscope -R"
 alias gendocandopen="epydoc --config epydoc.config && xdg-open apidocs/index.html"
 alias ut="workon utcom && cdvirtualenv && cd utcom"
+alias pu='python -m unittest'
 
 # ruby
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
@@ -35,3 +36,4 @@ export DEBEMAIL="tualatrix@gmail.com"
 export DEBFULLNAME="Tualatrix Chou"
 export UTCOM_USER="tualatrix"
 export UTCOM_HOST="ubuntu-tweak.com:24"
+export EDITOR="vim"
