@@ -27,7 +27,8 @@ set shiftwidth=4
 set expandtab
 
 :map <F12> :!python -m pdb %<CR>
-:map <C-c> "+y
+" :map <C-c> "+y
+vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
 :map <C-v> "+p
 nmap <F2> :NERDTreeToggle<CR>.
 
@@ -56,15 +57,20 @@ fun SetupVAM()
   " be installed form www.vim.org. Lookup MergeSources to get more control
   " let g:vim_addon_manager['drop_git_sources'] = !executable('git')
 
-  call vam#ActivateAddons(['snipmate-snippets',
-                          \ 'vim-ruby',
-                          \ 'vim-rails',
-                          \ 'vim-coffee-script',
-                          \ 'nginx',
-                          \ 'ctrlp',
-                          \ 'fugitive',
-                          \ 'github:bbommarito/vim-slim',
-                          \ ], {'auto_install' : 0})
+  call vam#ActivateAddons(['github:tualatrix/snipmate-snippets',
+                        \  'github:tualatrix/vim-snipmate',
+                        \  'github:vim-ruby/vim-ruby',
+                        \  'github:tpope/vim-rails',
+                        \  'vim-coffee-script',
+                        \  'nginx',
+                        \  'ctrlp',
+                        \  'ack',
+                        \  'sparkup',
+                        \  'rainbow_parentheses',
+                        \  'vim-less',
+                        \  'fugitive',
+                        \  'github:bbommarito/vim-slim',
+                        \   ], {'auto_install' : 0})
   " sample: call vam#ActivateAddons(['pluginA','pluginB', ...], {'auto_install' : 0})
   " where 'pluginA' could be "git://" "github:YourName" or "snipmate-snippets" see vam#install#RewriteName()
   " also see section "5. Installing plugins" in VAM's documentation
@@ -79,6 +85,7 @@ call SetupVAM()
 
 " Set this toggle to make code paste more easily
 set pastetoggle=<F7>
+
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn|\.swp$'
 
 autocmd BufRead *.vala,*.vapi set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
@@ -99,3 +106,6 @@ let vala_no_tab_space_error = 1
 
 " Minimum lines used for comment syncing (default 50)
 "let vala_minlines = 120
+
+" disable the sparkup
+let g:sparkupNextMapping = '<c-s>'
