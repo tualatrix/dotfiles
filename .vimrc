@@ -1,6 +1,6 @@
+syntax enable
 colorscheme tango
 
-syntax on
 set hlsearch
 
 if filereadable("/etc/vim/vimrc")
@@ -63,9 +63,11 @@ Bundle 'ZenCoding.vim'
 Bundle 'CCTree'
 Bundle 'minibufexpl.vim'
 Bundle 'bufexplorer.zip'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'gtk-mode'
 
 filetype indent on
-filetype plugin indent on     " required! 
+filetype plugin indent on     " required!
 
 " Set this toggle to make code paste more easily
 set pastetoggle=<F7>
