@@ -17,7 +17,7 @@ test $DEBIAN_SCRIPT_DEBUG && set -v -x
 USER=tualatrix
 WEBSITE=dev.imtx.me
 
-DAEMON=/usr/local/rvm/bin/system_unicorn
+DAEMON=`which unicorn`
 APP_DIR=/home/$USER/public_html/$WEBSITE/current/
 DAEMON_OPTS="-c $APP_DIR/config/unicorn.rb -E production -D"
 NAME=unicorn
