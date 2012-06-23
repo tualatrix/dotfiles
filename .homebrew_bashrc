@@ -8,9 +8,8 @@ export BYOBU_PREFIX=`brew --prefix`
 
 . $HOME/.bashrc_extra
 
-export PATH=/usr/local/sbin:$HOME/.rvm/bin:$PATH
 export WORKON_HOME=$HOME/.virtualenvs
 export EDITOR=vim
 . /usr/local/share/python/virtualenvwrapper.sh
 
-[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+#[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator

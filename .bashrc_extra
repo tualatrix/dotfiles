@@ -28,10 +28,7 @@ alias gendocandopen="epydoc --config epydoc.config && xdg-open apidocs/index.htm
 alias ut="workon utcom && cdvirtualenv && cd utcom"
 alias pu='python -m unittest'
 
-# ruby
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
-
-export PATH=$HOME/.local/bin:$HOME/Sources/tools/bin:$HOME/Sources/tools/builder:$PATH
+export PATH=$HOME/.rbenv/shims:$HOME/.local/bin:$HOME/Sources/tools/bin:$HOME/Sources/tools/builder:$PATH
 export DEBEMAIL="tualatrix@gmail.com"
 export DEBFULLNAME="Tualatrix Chou"
 export UTCOM_USER="tualatrix"
