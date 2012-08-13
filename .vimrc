@@ -23,8 +23,8 @@ set shiftwidth=4
 set expandtab
 
 :map <F12> :!python -m pdb %<CR>
-:map <C-c> "+y
-"vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
+":map <C-c> "+y
+vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
 :map <C-v> "+p
 nmap <F2> :NERDTreeToggle<CR>.
 
@@ -57,14 +57,13 @@ Bundle 'rstacruz/sparkup'
 Bundle 'groenewege/vim-less'
 Bundle 'The-NERD-tree'
 Bundle 'jsbeautify'
-Bundle 'taglist.vim'
 Bundle 'matchit.zip'
 Bundle 'ZenCoding.vim'
 Bundle 'CCTree'
 Bundle 'minibufexpl.vim'
 Bundle 'bufexplorer.zip'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'gtk-mode'
+Bundle 'majutsushi/tagbar'
+Bundle 'scrooloose/syntastic'
 
 filetype indent on
 filetype plugin indent on     " required!
@@ -74,3 +73,5 @@ set pastetoggle=<F7>
 
 " ctrlp
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn|\.swp$'
+
+nmap <F8> :TagbarToggle<CR>
