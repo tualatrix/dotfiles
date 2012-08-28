@@ -79,3 +79,7 @@ set pastetoggle=<F7>
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 
 nmap <F8> :TagbarToggle<CR>
+
+" session
+nmap SSA :wa<CR>:mksession! ~/sessions/
+nmap SO :wa<CR>:so ~/sessions/
