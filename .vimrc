@@ -77,3 +77,7 @@ set pastetoggle=<F7>
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn|\.swp$'
 
 nmap <F8> :TagbarToggle<CR>
+
+" session
+nmap SSA :wa<CR>:mksession! ~/sessions/
+nmap SO :wa<CR>:so ~/sessions/
