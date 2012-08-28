@@ -16,6 +16,8 @@ set encoding=utf-8
 autocmd FileType python set tabstop=4 shiftwidth=4 expandtab omnifunc=pythoncomplete#Complete
 autocmd FileType c set tabstop=2 shiftwidth=2 expandtab omnifunc=ccomplete#Complete
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 
 au BufRead,BufNewFile */etc/nginx/* set ft=nginx
 au BufRead,BufNewFile */etc/init.d/* set ft=sh
@@ -74,6 +76,6 @@ filetype plugin indent on     " required!
 set pastetoggle=<F7>
 
 " ctrlp
-let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn|\.swp$'
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 
 nmap <F8> :TagbarToggle<CR>
