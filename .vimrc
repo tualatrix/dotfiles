@@ -18,6 +18,7 @@ autocmd FileType c set tabstop=2 shiftwidth=2 expandtab omnifunc=ccomplete#Compl
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
+autocmd BufNewFile,BufRead *.json set ft=javascript
 
 au BufRead,BufNewFile */etc/nginx/* set ft=nginx
 au BufRead,BufNewFile */etc/init.d/* set ft=sh
@@ -68,6 +69,7 @@ Bundle 'minibufexpl.vim'
 Bundle 'bufexplorer.zip'
 Bundle 'majutsushi/tagbar'
 Bundle 'scrooloose/syntastic'
+Bundle 'jade.vim'
 
 filetype indent on
 filetype plugin indent on     " required!
