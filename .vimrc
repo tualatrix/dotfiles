@@ -28,8 +28,13 @@ set shiftwidth=4
 set expandtab
 
 :map <F12> :!python -m pdb %<CR>
-":map <C-c> "+y
-vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
+
+if filereadable("/etc/issue.net")
+    :map <C-c> "+y
+else
+    vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
+endif
+
 :map <C-v> "+p
 nmap <F2> :NERDTreeToggle<CR>.
 
@@ -70,6 +75,7 @@ Bundle 'bufexplorer.zip'
 Bundle 'majutsushi/tagbar'
 Bundle 'scrooloose/syntastic'
 Bundle 'jade.vim'
+Bundle 'fsouza/go.vim'
 
 filetype indent on
 filetype plugin indent on     " required!
