@@ -1,6 +1,11 @@
 syntax enable
 colorscheme tango
 
+"incsearch is something like live search
+set incsearch
+" ignorecase and smartcase: /foo matches foo and fOo, /Foo only matches Foo
+set ignorecase
+set smartcase
 set hlsearch
 
 if filereadable("/etc/vim/vimrc")
