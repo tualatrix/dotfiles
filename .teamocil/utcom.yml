@@ -1,0 +1,38 @@
+session:
+  name: 'utcom'
+  windows:
+    - name: "server"
+      root: '~/.virtualenvs/ubuntu-tweak.com/utcom'
+      filters:
+        before: workon ubuntu-tweak.com
+        after: ./manage.py runserver
+      splits:
+        [splits list]
+    - name: "vim"
+      root: '~/.virtualenvs/ubuntu-tweak.com/utcom'
+      filters:
+        before: workon ubuntu-tweak.com
+        after: vim utcom
+      splits:
+        [splits list]
+    - name: "shell"
+      root: '~/.virtualenvs/ubuntu-tweak.com/utcom'
+      filters:
+        before: workon ubuntu-tweak.com
+        after: git status
+      splits:
+        [splits list]
+    - name: "pyshell"
+      root: '~/.virtualenvs/ubuntu-tweak.com/utcom'
+      filters:
+        before: workon ubuntu-tweak.com
+        after: ./manage.py shell
+      splits:
+        [splits list]
+    - name: "dbshell"
+      root: '~/.virtualenvs/ubuntu-tweak.com/utcom'
+      filters:
+        before: workon ubuntu-tweak.com
+        after: ./manage.py dbshell
+      splits:
+        [splits list]
