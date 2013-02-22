@@ -12,7 +12,7 @@ session:
       root: '~/.virtualenvs/ubuntu-tweak.com/utcom'
       filters:
         before: workon ubuntu-tweak.com
-        after: vim utcom
+        after: vim -c ':so ~/.vim/sessions/utcom'
       splits:
         [splits list]
     - name: "shell"

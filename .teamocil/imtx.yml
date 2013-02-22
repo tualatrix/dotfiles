@@ -12,7 +12,7 @@ session:
       root: '~/.virtualenvs/imtx.me/imtx'
       filters:
         before: workon imtx.me
-        after: vim imtx
+        after: vim -c ':so ~/.vim/sessions/imtx'
       splits:
         [splits list]
     - name: "shell"
