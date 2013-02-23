@@ -99,13 +99,29 @@ set undolevels=1000 "maximum number of changes that can be undone
 set undoreload=10000 "maximum number lines to save for undo on a buffer reload
 
 " session
+function GetProjectName()
+    let edit_files = split(system("ps -o command= -p " . getpid()))
+    if len(edit_files) >= 2
+        let project_path = edit_files[1]
+        if project_path[0] != '/'
+            let project_path = getcwd() . project_path
+        endif
+        return substitute(project_path, '[/]', '', 'g')
+    else
+        return substitute(getcwd(), '[/[:cntrl:]]', '', 'g')
+    endif
+endfunction
+
 fu! SaveSess()
-    execute 'mksession! ' . getcwd() . '/.session.pyc'
+    let project_name = GetProjectName()
+    execute 'mksession! ~/.vim/sessions/' . project_name
 endfunction
 
 fu! RestoreSess()
-    if filereadable(getcwd() . '/.session.pyc')
-        execute 'so ' . getcwd() . '/.session.pyc'
+    let project_name = GetProjectName()
+    let session_path = expand('~/.vim/sessions/' . project_name)
+    if filereadable(session_path)
+        execute 'so ' . session_path
         if bufexists(1)
             for l in range(1, bufnr('$'))
                 if bufwinnr(l) == -1
