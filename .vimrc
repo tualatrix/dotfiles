@@ -60,6 +60,7 @@ Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle 'git@github.com:tualatrix/vim-snipmate'
 Bundle 'git@github.com:tualatrix/snipmate-snippets'
+Bundle 'fholgado/minibufexpl.vim.git'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fugitive'
@@ -75,7 +76,6 @@ Bundle 'jsbeautify'
 Bundle 'matchit.zip'
 Bundle 'ZenCoding.vim'
 Bundle 'CCTree'
-Bundle 'minibufexpl.vim'
 Bundle 'bufexplorer.zip'
 Bundle 'majutsushi/tagbar'
 Bundle 'scrooloose/syntastic'
@@ -93,6 +93,31 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 
 nmap <F8> :TagbarToggle<CR>
 
+set undodir=~/.vim/undodir
+set undofile
+set undolevels=1000 "maximum number of changes that can be undone
+set undoreload=10000 "maximum number lines to save for undo on a buffer reload
+
 " session
-nmap SSA :wa<CR>:mksession! ~/sessions/
-nmap SO :wa<CR>:so ~/sessions/
+fu! SaveSess()
+    execute 'mksession! ' . getcwd() . '/.session.pyc'
+endfunction
+
+fu! RestoreSess()
+    if filereadable(getcwd() . '/.session.pyc')
+        execute 'so ' . getcwd() . '/.session.pyc'
+        if bufexists(1)
+            for l in range(1, bufnr('$'))
+                if bufwinnr(l) == -1
+                    exec 'sbuffer ' . l
+                endif
+            endfor
+        endif
+    endif
+    syntax on
+endfunction
+
+nmap ssa :call SaveSess()
+smap SO :call RestoreSess()
+autocmd VimLeave * call SaveSess()
+autocmd VimEnter * call RestoreSess()
