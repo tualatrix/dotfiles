@@ -1,3 +1,6 @@
 *.py[co]
+.DS_Store
 .vim/bundle/*
 !.vim/bundle/vundle
+.vim/sessions/*
+.vim/undodir/*
