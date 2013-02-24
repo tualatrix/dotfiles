@@ -106,18 +106,20 @@ function GetProjectName()
         if project_path[0] != '/'
             let project_path = getcwd() . project_path
         endif
-        return substitute(project_path, '[/]', '', 'g')
     else
-        return substitute(getcwd(), '[/[:cntrl:]]', '', 'g')
+        let project_path = getcwd()
     endif
+
+    return shellescape(substitute(project_path, '[/]', '', 'g'))
 endfunction
 
-fu! SaveSess()
+function SaveSession()
+    execute ':NERDTreeClose'
     let project_name = GetProjectName()
     execute 'mksession! ~/.vim/sessions/' . project_name
 endfunction
 
-fu! RestoreSess()
+function RestoreSession()
     let project_name = GetProjectName()
     let session_path = expand('~/.vim/sessions/' . project_name)
     if filereadable(session_path)
@@ -133,7 +135,7 @@ fu! RestoreSess()
     syntax on
 endfunction
 
-nmap ssa :call SaveSess()
-smap SO :call RestoreSess()
-autocmd VimLeave * call SaveSess()
-autocmd VimEnter * call RestoreSess()
+nmap ssa :call SaveSession()
+smap SO :call RestoreSession()
+autocmd VimLeave * call SaveSession()
+autocmd VimEnter * call RestoreSession()
