@@ -42,6 +42,7 @@ endif
 
 :map <C-v> "+p
 nmap <F2> :NERDTreeToggle<CR>.
+let NERDTreeIgnore=['\.pyc$', '\~$']
 
 set list
 set listchars=tab:▸\ ,eol:¬
