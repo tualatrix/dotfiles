@@ -28,7 +28,7 @@ alias gendocandopen="epydoc --config epydoc.config && xdg-open apidocs/index.htm
 alias ut="workon utcom && cdvirtualenv && cd utcom"
 alias pu='python -m unittest'
 
-export PATH=$HOME/.rbenv/shims:$HOME/.local/bin:$HOME/Sources/tools/bin:$HOME/Sources/tools/builder:$PATH
+export PATH=$HOME/.rbenv/shims:$HOME/.local/bin:$HOME/Sources/tools/bin:$HOME/Sources/tools/builder:/usr/local/bin:$PATH
 export DEBEMAIL="tualatrix@gmail.com"
 export DEBFULLNAME="Tualatrix Chou"
 export UTCOM_USER="tualatrix"
