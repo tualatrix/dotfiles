@@ -10,6 +10,9 @@ export BYOBU_PREFIX=`brew --prefix`
 
 export WORKON_HOME=$HOME/.virtualenvs
 export EDITOR=vim
-. /usr/local/share/python/virtualenvwrapper.sh
+
+if [ -f /usr/local/share/python/virtualenvwrapper.sh ]; then
+    . /usr/local/share/python/virtualenvwrapper.sh
+fi
 
 #[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
