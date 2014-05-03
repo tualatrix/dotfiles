@@ -10,7 +10,7 @@
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/local/share/python:/bin:/usr/sbin:/sbin:/usr/bin:/usr/X11/bin"
+    PATH="$HOME/.local/bin:/usr/local/sbin:/usr/local/bin:/bin:/usr/sbin:/sbin:/usr/bin:/usr/X11/bin"
 fi
 
 # if running bash
