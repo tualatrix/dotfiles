@@ -116,6 +116,7 @@ endfunction
 
 function SaveSession()
     execute ':NERDTreeClose'
+    execute ':MBECloseAll'
     let project_name = GetProjectName()
     execute 'mksession! ~/.vim/sessions/' . project_name
 endfunction
