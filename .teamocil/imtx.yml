@@ -1,38 +1,32 @@
-session:
-  name: 'imtx'
-  windows:
-    - name: "server"
-      root: '~/.virtualenvs/imtx.me/imtx'
-      filters:
-        before: workon imtx.me
-        after: ./manage.py runserver
-      splits:
-        [splits list]
-    - name: "vim"
-      root: '~/.virtualenvs/imtx.me/imtx'
-      filters:
-        before: workon imtx.me
-        after: vim
-      splits:
-        [splits list]
-    - name: "shell"
-      root: '~/.virtualenvs/imtx.me/imtx'
-      filters:
-        before: workon imtx.me
-        after: git status
-      splits:
-        [splits list]
-    - name: "pyshell"
-      root: '~/.virtualenvs/imtx.me/imtx'
-      filters:
-        before: workon imtx.me
-        after: ./manage.py shell
-      splits:
-        [splits list]
-    - name: "dbshell"
-      root: '~/.virtualenvs/imtx.me/imtx'
-      filters:
-        before: workon imtx.me
-        after: ./manage.py dbshell
-      splits:
-        [splits list]
+name: 'imtx'
+windows:
+  - name: "server"
+    root: '~/.virtualenvs/imtx.me/imtx'
+    panes:
+      - commands:
+        - workon imtx.me
+        - ./manage.py runserver
+  - name: "vim"
+    root: '~/.virtualenvs/imtx.me/imtx'
+    panes:
+      - commands:
+        - workon imtx.me
+        - vim
+  - name: "shell"
+    root: '~/.virtualenvs/imtx.me/imtx'
+    panes:
+      - commands:
+        - workon imtx.me
+        - git status
+  - name: "pyshell"
+    root: '~/.virtualenvs/imtx.me/imtx'
+    panes:
+      - commands:
+        - workon imtx.me
+        - ./manage.py shell
+  - name: "dbshell"
+    root: '~/.virtualenvs/imtx.me/imtx'
+    panes:
+      - commands:
+        - workon imtx.me
+        - ./manage.py dbshell
