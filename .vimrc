@@ -82,6 +82,7 @@ Bundle 'majutsushi/tagbar'
 Bundle 'scrooloose/syntastic'
 Bundle 'jade.vim'
 Bundle 'fsouza/go.vim'
+Bundle 'rust-lang/rust.vim'
 
 filetype indent on
 filetype plugin indent on     " required!
