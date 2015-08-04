@@ -1,0 +1,32 @@
+name: 'manico'
+windows:
+  - name: "server"
+    root: '~/.virtualenvs/manico.im/manico_im'
+    panes:
+      - commands:
+        - workon manico.im
+        - ./manage.py runserver
+  - name: "vim"
+    root: '~/.virtualenvs/manico.im/manico_im'
+    panes:
+      - commands:
+        - workon manico.im
+        - vim
+  - name: "shell"
+    root: '~/.virtualenvs/manico.im/manico_im'
+    panes:
+      - commands:
+        - workon manico.im
+        - git status
+  - name: "pyshell"
+    root: '~/.virtualenvs/manico.im/manico_im'
+    panes:
+      - commands:
+        - workon manico.im
+        - ./manage.py shell
+  - name: "dbshell"
+    root: '~/.virtualenvs/manico.im/manico_im'
+    panes:
+      - commands:
+        - workon manico.im
+        - ./manage.py dbshell
