@@ -24,6 +24,11 @@ windows:
       - commands:
         - workon imtx.me
         - ./manage.py shell
+  - name: "postgresql"
+    root: '~/.virtualenvs/imtx.me/imtx'
+    panes:
+      - commands:
+        - postgres -D /usr/local/var/postgres
   - name: "dbshell"
     root: '~/.virtualenvs/imtx.me/imtx'
     panes:
